@@ -1,136 +1,135 @@
-<h1 align="center">Kamil Nowak — Interactive 3D Portfolio</h1>
+# Pranav Dixit — Code & Cognition
 
 <p align="center">
-  A cinematic portfolio combining reliable engineering with motion, visual depth and real-time graphics.
+  <strong>AI/ML Engineer & Full-Stack Developer</strong><br>
+  B.Tech CSE (AI/ML) · UPES Dehradun · Expected May 2028 · CGPA 8.4/10
 </p>
 
 <p align="center">
-  <a href="https://nowakkamil.com">Live website</a>
+  <a href="https://pranavdixit-25.github.io">Live Portfolio</a>
   ·
-  <a href="https://www.linkedin.com/in/nowakkamil">LinkedIn</a>
+  <a href="https://www.linkedin.com/in/pranav-dixit-9ab7b7345/">LinkedIn</a>
   ·
-  <a href="https://github.com/nowakkamil">GitHub</a>
+  <a href="https://github.com/PranavDixit-25">GitHub</a>
+  ·
+  <a href="mailto:pranav1467d@gmail.com">Email</a>
 </p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Three.js-WebGL-000000?style=flat-square&logo=threedotjs&logoColor=white" alt="Three.js and WebGL" />
   <img src="https://img.shields.io/badge/TypeScript-7%20%7C%20Strict-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript 7 in strict mode" />
   <img src="https://img.shields.io/badge/Vite-8-646CFF?style=flat-square&logo=vite&logoColor=white" alt="Vite 8" />
+  <img src="https://img.shields.io/badge/AI%2FML-PyTorch%20%7C%20FastAPI-blue?style=flat-square" alt="AI/ML" />
 </p>
 
-<p align="center">
-  <img src="docs/assets/showcase.gif" alt="Animated showcase of the interactive 3D portfolio: cinematic WebGL environment, scroll-directed transitions and the project constellation" />
-</p>
+---
 
-## About the project
+## About Code & Cognition
 
-This is not a template-based portfolio or a static collection of cards. It is an exploration of how software engineering, interface design, animation and real-time rendering can work together without sacrificing clarity, accessibility or maintainability.
+**Code & Cognition** represents the intersection of robust software engineering and cognitive computing. This personal website showcases the engineering projects, professional experience, research interests, and technical capabilities of **Pranav Dixit**.
 
-The experience has two main goals: to present my work through a distinctive visual identity and to make moving through it feel natural. **Three.js**, custom **GLSL shaders** and particles create the atmosphere, while **GSAP** connects scrolling, camera movement, text and shader transitions into one coherent timeline.
+From designing end-to-end data pipelines and multi-module analytics dashboards in **SupplyChain AI** to developing gesture-controlled interfaces, student management platforms, and agentic workflows, this portfolio presents both production-grade systems and technical prototypes with full transparency.
 
-Visitors can explore my professional experience, education and recommendations, navigate an interactive constellation of projects, and get in touch directly through the website.
+---
 
-## Behind the experience
+## Visual & Technical Architecture
 
-🌌 **Cinematic WebGL environment:** particles, lighting, fog, bloom and section-aware shaders<br>
-🧭 **Scroll-directed storytelling:** coordinated DOM, camera and shader transitions<br>
-✨ **Project constellation:** connected projects with keyboard-operable details and navigation<br>
-📱 **Responsive rendering:** dedicated camera, layout and effect settings for smaller devices<br>
-⚡ **Performance:** bounded frame updates, reusable scene objects and geometry work moved to a Web Worker<br>
-♿ **Accessibility:** semantic content, reduced-motion support and professional information kept outside WebGL<br>
-🔎 **SEO:** structured data, social metadata, sitemap and a canonical custom domain
+- **🌌 Cinematic 3D Galaxy:** Deep cosmic space background (`#000000`, `#00040e`) powered by Three.js particle systems, point lights, and dynamic camera transitions.
+- **👤 Central Hero Portrait:** Showcasing Pranav's verified portrait framed with radial ambient backlighting in blue (`#3b82f6`) and purple (`#8b5cf6`).
+- **🧭 10 Complete Sections:**
+  1. **Hero:** Instant brand identity, central portrait, badges, primary actions.
+  2. **About Me:** Verified developer journey — from robotics summer camp and Arduino programming to JARVIS inspiration and AI/ML model training.
+  3. **Professional Experience:** Interactive timeline covering Anantixia Pvt. Ltd., Xebia IT Architects, Google Gemini Student Ambassador, Freelance Web Developer, and Samarth Bharat Vyaspeeth NGO.
+  4. **Featured Projects:** Prominently spotlights **SupplyChain AI** alongside 7 verified projects (UniSmart LMS, Hand Gesture Virtual Mouse, Legal Lens, ResQConnect AI, Vigilant, Campus Lost & Found, Expense Tracker). Includes modal views with technical architecture and metrics.
+  5. **Interactive 3D Constellation:** 3D project visualization mapping projects across 3 clusters: *AI & Data Engineering*, *Full-Stack Systems*, and *Computer Vision & Mobile*.
+  6. **Technical Skills:** 6 structured categories (Languages, Backend & Databases, Frontend & Mobile, Data/AI/CV, Cloud & DevOps, Computer Science Foundations) without arbitrary progress bars.
+  7. **Achievements & Programmes:** 12 achievements and programmes, including ICP–WCHL25 National Round qualification, Google Solution Challenge 2026 prototype submission, Google Gemini Student Ambassador, 100 Days of Code, 21 Days of DSA Code, Cisco Networking Academy certifications (Modern AI, Python Essentials, OS Basics), and NIT Kurukshetra cybersecurity training.
+  8. **Leadership & Community:** IEEE Computer Society, Open Source Contributions, UPES ACM Student Chapter, and NGO technical leadership.
+  9. **GitHub Activity:** Live metrics and direct links to active repositories.
+  10. **Interactive Contact & Resume:** Accessible contact form with immediate feedback and mailto dispatch, plus a dynamic resume request modal.
+- **⚡ Performance & Standards:** Native DOM APIs with TypeScript strict mode, CSS clamp-based fluid typography, responsive mobile drawer navigation, and accessible semantic HTML.
 
-The application is organised into focused modules for page sections, rendering systems, shaders, interactions and styling. `main.ts` acts primarily as a composition root instead of holding the full implementation.
+---
 
-React is part of my professional stack, but this project does not need a large component state model. Native DOM APIs and modular TypeScript keep the interface lightweight and allow the visual layer to remain independent.
+## Getting Started
 
-## Quality audit ✨
+### Prerequisites
 
-The perfect sweep is a small but meaningful achievement for a visually complex portfolio powered by Three.js, WebGL, custom shaders and extensive animation.
+- **Node.js:** 20.x or 22.x LTS
+- **npm:** 10.x+
 
-<p align="center">
-  <img src="docs/assets/lighthouse-perfect-score.svg" alt="Perfect Lighthouse audit: 100 Performance, 100 Accessibility, 100 Best Practices, 100 SEO and 3/3 Agentic Browsing" width="1200" />
-</p>
-
-<p align="center">
-  <strong>100</strong> Performance &nbsp;·&nbsp;
-  <strong>100</strong> Accessibility &nbsp;·&nbsp;
-  <strong>100</strong> Best Practices &nbsp;·&nbsp;
-  <strong>100</strong> SEO &nbsp;·&nbsp;
-  <strong>3/3</strong> Agentic Browsing
-</p>
-
-<p align="center">
-  <sub>
-    <strong>Audit snapshot</strong> · 20 August 2026 at 20:52 GMT+2 · Lighthouse 13.4.0 · Chromium 151 · Initial single-page desktop load · Custom throttling
-  </sub>
-</p>
-
-## Core technologies
-
-🟦 **Language and tooling:** TypeScript, Vite<br>
-🎨 **Rendering:** Three.js, WebGL, GLSL<br>
-🎬 **Motion:** GSAP, ScrollTrigger, ScrollSmoother, SplitText<br>
-🖌️ **Styling:** SCSS<br>
-🧵 **Background processing:** Web Worker<br>
-☁️ **Hosting:** Cloudflare Pages and GitHub Pages
-
-## Email templates
-
-The repository also contains the email assets used by the contact flow:
-
-- [Customer confirmation email](emails/README.md) — build, variables and sending behaviour;
-- [Email signature](emails/signature/README.md) — Spark installation and testing.
-
-## Search and image checks
-
-SEO is focused on the portfolio itself and does not require a separate publishing workflow.
+### Installation
 
 ```bash
-npm run seo:check        # validate the production SEO output in dist/
-npm run images:generate  # regenerate responsive project-image variants
-npm run images:check     # verify image dimensions, sizes and fallbacks
+# Clone the repository
+git clone https://github.com/PranavDixit-25/pranav-dixit-portfolio.git
+cd pranav-dixit-portfolio
+
+# Install dependencies
+npm install
 ```
 
-The deployment and recurring Google Search Console/Bing Webmaster Tools checklist is documented in [docs/seo-operations.md](docs/seo-operations.md).
-
-## Local development
-
-You will need a recent Node.js release, npm and a browser with WebGL support.
+### Development Server
 
 ```bash
-npm install
 npm run dev
 ```
 
-Useful commands:
+Runs the local Vite development server at `http://localhost:5173/`.
+
+### Production Build & Verification
 
 ```bash
-npm run typecheck  # validate TypeScript
-npm run lint       # check code and styles
-npm test           # run contact-form tests
-npm run build      # create the production build
-npm run preview    # preview the generated site
+# Typecheck TypeScript without emitting
+npm run typecheck
+
+# Lint TypeScript and SCSS
+npm run lint
+
+# Run unit and integration tests
+npm test
+
+# Build for production and run SEO validation
+npm run build
+
+# Preview production build locally
+npm run preview
 ```
 
-The contact form uses Cloudflare Pages Functions, Turnstile and Resend. A production setup requires `VITE_TURNSTILE_SITE_KEY`, `TURNSTILE_SECRET_KEY`, `RESEND_API_KEY`, `CONTACT_SENDER` and `CONTACT_RECIPIENT`. Visitor confirmation emails can be enabled with `SEND_VISITOR_CONFIRMATION=true`.
+---
 
-## Deployment
+## Project Structure
 
-The primary version is served through Cloudflare Pages at [nowakkamil.com](https://nowakkamil.com/). The [GitHub Pages deployment](https://nowakkamil.github.io/) remains available as an alternate address, while the custom domain is canonical for search engines and public sharing.
+```
+├── public/                 # Static assets (portrait, icons, robots.txt, sitemap.xml, llms.txt)
+│   └── images/
+│       └── pranav-profile.jpeg  # Verified central portrait
+├── src/
+│   ├── app/                # Application initialization and UI logic
+│   │   └── portfolioUi.ts  # Modals, mobile drawer, contact form, smooth scrolling
+│   ├── data/               # Structured data layer
+│   │   ├── profile.ts      # Identity, bio, education, contacts
+│   │   ├── projects.ts     # 8 verified projects with tech stacks and metrics
+│   │   ├── experience.ts   # 5 verified professional roles
+│   │   ├── skills.ts       # 6 technical categories
+│   │   ├── achievements.ts # 12 achievements and programmes
+│   │   └── leadership.ts   # 4 leadership & community engagements
+│   ├── sections/           # Section modules & 3D project constellation mapping
+│   ├── styles/             # SCSS stylesheets (portfolio.scss, style.scss)
+│   ├── world/              # Three.js scene, camera, particle shaders, workers
+│   └── main.ts             # Application composition root
+├── scripts/                # Build and SEO verification scripts
+├── tests/                  # Test suites
+├── index.html              # Main HTML entry with semantic sections and JSON-LD Schema
+└── package.json            # Scripts and dependencies
+```
 
-## About me
+---
 
-I am a senior full-stack developer specialising in **React, TypeScript and .NET**. I build robust applications across front end, back end and cloud infrastructure, and particularly enjoy transforming ambitious visual concepts into maintainable digital products.
+## Contact & Connect
 
-My interest in Three.js, WebGL and digital motion draws on a background in fine-art photography and compositing — the point where technical problem-solving and visual experimentation meet.
-
-## License
-
-Unless a separate licence file states otherwise, the source code, visual design, text, shaders, media and project assets are provided for evaluation and demonstration purposes. They may not be copied, redistributed or used as a template without permission. Third-party libraries and assets remain subject to their respective licences.
-
-<p align="center">
-  <i>
-    Built with TypeScript, Three.js, GLSL, GSAP, SCSS and a refusal to make another ordinary portfolio.
-  </i>
-</p>
+- **Portfolio:** [https://pranavdixit-25.github.io](https://pranavdixit-25.github.io)
+- **LinkedIn:** [linkedin.com/in/pranav-dixit-9ab7b7345](https://www.linkedin.com/in/pranav-dixit-9ab7b7345/)
+- **GitHub:** [github.com/PranavDixit-25](https://github.com/PranavDixit-25)
+- **Email:** [pranav1467d@gmail.com](mailto:pranav1467d@gmail.com)
+- **Location:** Dehradun, Uttarakhand, India

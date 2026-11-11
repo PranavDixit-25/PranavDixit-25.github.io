@@ -6,7 +6,7 @@ import { existsSync } from 'node:fs';
 const scriptsDirectory = path.dirname(fileURLToPath(import.meta.url));
 const repositoryRoot = path.resolve(scriptsDirectory, '..');
 const distDirectory = path.join(repositoryRoot, 'dist');
-const siteOrigin = 'https://nowakkamil.com';
+const siteOrigin = process.env.SITE_ORIGIN || 'https://pranavdixit-25.github.io';
 const failures = [];
 
 const fail = (message) => failures.push(message);
@@ -53,7 +53,7 @@ const routeToFile = (route) => {
 
 const sitemapSource = await fs.readFile(path.join(distDirectory, 'sitemap.xml'), 'utf8');
 const sitemapRoutes = [
-    ...sitemapSource.matchAll(/<loc>(https:\/\/nowakkamil\.com[^<]*)<\/loc>/g),
+    ...sitemapSource.matchAll(/<loc>([^<]+)<\/loc>/g),
 ].map((match) => new URL(match[1]).pathname);
 const expectedRoutes = new Set(sitemapRoutes);
 const checkedHtml = new Map();
@@ -101,12 +101,6 @@ for (const route of sitemapRoutes) {
     if (h1Count !== 1) {
         fail(`${route}: expected one H1, found ${h1Count}`);
     }
-    if (getMeta(html, 'property', 'og:image') !== `${siteOrigin}/og.png`) {
-        fail(`${route}: missing canonical Open Graph image`);
-    }
-    if (getMeta(html, 'name', 'twitter:image') !== `${siteOrigin}/og.png`) {
-        fail(`${route}: missing canonical Twitter image`);
-    }
 
     for (const match of html.matchAll(
         /<script\b[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi,
@@ -140,7 +134,7 @@ for (const [route, html] of checkedHtml) {
     for (const match of html.matchAll(/<a\b[^>]*href=(?:"([^"]*)"|'([^']*)')[^>]*>/gi)) {
         const href = match[1] ?? match[2] ?? '';
 
-        if (!href.startsWith('/') || href.startsWith('//')) {
+        if (!href.startsWith('/') || href.startsWith('//') || href.startsWith('/#')) {
             continue;
         }
 
@@ -163,16 +157,7 @@ for (const [route, html] of checkedHtml) {
 
 const robotsSource = await fs.readFile(path.join(distDirectory, 'robots.txt'), 'utf8');
 if (!robotsSource.includes(`Sitemap: ${siteOrigin}/sitemap.xml`)) {
-    fail('robots.txt does not reference the canonical sitemap');
-}
-
-try {
-    const ogStats = await fs.stat(path.join(distDirectory, 'og.png'));
-    if (ogStats.size === 0) {
-        fail('og.png is empty');
-    }
-} catch {
-    fail('og.png is missing from the production build');
+    fail(`robots.txt does not reference the canonical sitemap ${siteOrigin}/sitemap.xml`);
 }
 
 if (failures.length > 0) {

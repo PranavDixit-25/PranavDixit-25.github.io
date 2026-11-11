@@ -47,7 +47,7 @@ afterEach(() => {
 describe('customer confirmation markup', () => {
     it('allows a single long token to wrap inside the message block', () => {
         const html = renderCustomerConfirmationBodyHtml(
-            'https://nowakkamil.com/https://nowakkamil.com/https://nowakkamil.com/',
+            'https://pranavdixit-25.github.io/https://pranavdixit-25.github.io/https://pranavdixit-25.github.io/',
         );
 
         assert.match(html, /table-layout: fixed/);
@@ -163,7 +163,7 @@ describe('contact Pages Function', () => {
         const ownerEmail = JSON.parse(String(calls[1]?.init?.body)) as Record<string, unknown>;
         assert.deepEqual(ownerEmail.to, [validEnv.CONTACT_RECIPIENT]);
         assert.equal(ownerEmail.reply_to, validBody.email);
-        assert.equal(ownerEmail.subject, 'Project inquiry via nowakkamil.com');
+        assert.equal(ownerEmail.subject, 'Project inquiry via Code & Cognition Portfolio');
         assert.match(String(ownerEmail.html), /New inquiry/);
         assert.match(String(ownerEmail.html), /Test Visitor/);
         assert.match(String(ownerEmail.html), /visitor@example\.com/);
@@ -211,18 +211,18 @@ describe('contact Pages Function', () => {
         assert.match(String(visitorEmail.html), /Hi Test,/);
         assert.match(String(visitorEmail.html), /This is a valid contact message\./);
         assert.match(String(visitorEmail.text), /This is a valid contact message\./);
-        assert.match(String(visitorEmail.html), /https:\/\/nowakkamil\.com/);
+        assert.match(String(visitorEmail.html), /https:\/\/pranavdixit-25\.github\.io/);
         assert.match(
             String(visitorEmail.html),
-            /https:\/\/nowakkamil\.com\/email\/v\d+-\d{4}-\d{2}-\d{2}\/kn-monogram\.png/,
+            /https:\/\/pranavdixit-25\.github\.io\/email\/v\d+-\d{4}-\d{2}-\d{2}\/pd-monogram\.png/,
         );
         assert.match(
             String(visitorEmail.html),
-            /https:\/\/nowakkamil\.com\/email\/v\d+-\d{4}-\d{2}-\d{2}\/globe\.png/,
+            /https:\/\/pranavdixit-25\.github\.io\/email\/v\d+-\d{4}-\d{2}-\d{2}\/globe\.png/,
         );
         assert.match(
             String(visitorEmail.html),
-            /https:\/\/nowakkamil\.com\/email\/v\d+-\d{4}-\d{2}-\d{2}\/signature-wave\.png/,
+            /https:\/\/pranavdixit-25\.github\.io\/email\/v\d+-\d{4}-\d{2}-\d{2}\/signature-wave\.png/,
         );
         assert.equal(visitorEmail.attachments, undefined);
         assert.doesNotMatch(String(visitorEmail.html), /{{\s*(?:firstName|message|asset\w+)\s*}}/);

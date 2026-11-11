@@ -1,8 +1,8 @@
 {
-    "name": "nowakkamil.github.io",
+    "name": "pranav-dixit-portfolio",
     "version": "2.0.0",
     "private": true,
-    "description": "Interactive 3D developer portfolio built with Three.js, GSAP, TypeScript, and Vite.",
+    "description": "Pranav Dixit — Code & Cognition — AI/ML Engineer & Full-Stack Developer Portfolio built with Three.js, TypeScript, Vite, and GSAP.",
     "type": "module",
     "scripts": {
         "dev": "vite",

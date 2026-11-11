@@ -2,13 +2,13 @@
 
 ## Document purpose
 
-This document defines the deployment controls, search-engine registration procedures, launch acceptance criteria, and ongoing monitoring activities for `https://nowakkamil.com`.
+This document defines the deployment controls, search-engine registration procedures, launch acceptance criteria, and ongoing monitoring activities for `https://pranavdixit-25.github.io`.
 
 ## Scope
 
 The runbook applies to:
 
-- the canonical portfolio at `https://nowakkamil.com/`;
+- the canonical portfolio at `https://pranavdixit-25.github.io/`;
 - Google Search Console;
 - Bing Webmaster Tools;
 - repository-level SEO and responsive-image validation;
@@ -41,18 +41,17 @@ Perform this procedure after the SEO implementation is available in production.
 ### Google Search Console
 
 1. Open [Google Search Console](https://search.google.com/search-console).
-2. Create a [Domain property](https://support.google.com/webmasters/answer/34592) for `nowakkamil.com`.
-3. Add the supplied DNS TXT verification record at the authoritative DNS provider.
-4. Complete ownership verification in Search Console.
-5. [Submit](https://support.google.com/webmasters/answer/7451001) `https://nowakkamil.com/sitemap.xml` in the **Sitemaps** report.
-6. Run [URL Inspection](https://support.google.com/webmasters/answer/9012289) for `https://nowakkamil.com/` and request indexing.
-7. Confirm that the **Page indexing**, **HTTPS**, and **Core Web Vitals** reports are available and collecting data.
+2. Create a [URL prefix property](https://support.google.com/webmasters/answer/34592) for `https://pranavdixit-25.github.io/`.
+3. Complete ownership verification in Search Console via DNS, file upload, or HTML tag.
+4. Review that the **Page indexing**, **HTTPS**, and **Core Web Vitals** reports are available.
+5. [Submit](https://support.google.com/webmasters/answer/7451001) `https://pranavdixit-25.github.io/sitemap.xml` in the **Sitemaps** report.
+6. Run [URL Inspection](https://support.google.com/webmasters/answer/9012289) for `https://pranavdixit-25.github.io/` and request indexing.
 
 ### Bing Webmaster Tools
 
 1. Open [Bing Webmaster Tools](https://www.bing.com/webmasters/).
-2. [Import the verified Google Search Console property](https://www.bing.com/webmasters/help/add-and-verify-site-12184f8b), or verify `nowakkamil.com` directly through DNS.
-3. [Submit](https://www.bing.com/webmasters/help/sitemaps-3b5cf6ed) `https://nowakkamil.com/sitemap.xml` in the **Sitemaps** report.
+2. [Import the verified Google Search Console property](https://www.bing.com/webmasters/help/add-and-verify-site-12184f8b), or verify `pranavdixit-25.github.io` directly.
+3. [Submit](https://www.bing.com/webmasters/help/sitemaps-3b5cf6ed) `https://pranavdixit-25.github.io/sitemap.xml` in the **Sitemaps** report.
 4. Run a full-domain [Site Scan](https://www.bing.com/webmasters/help/site-scan-623520c9).
 5. Resolve errors before warnings and informational recommendations.
 6. Run [URL Inspection](https://www.bing.com/webmasters/help/URL-Inspection-55a30305) for the homepage after the first crawl.
@@ -65,7 +64,7 @@ Record the execution date, environment, and result for each control.
 
 | Control                 | Expected result                                                                                                                      |
 | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| Canonical origin        | HTTP and `www` requests redirect once to `https://nowakkamil.com/`.                                                                  |
+| Canonical origin        | Site is served canonically at `https://pranavdixit-25.github.io/`.                                                                   |
 | Unknown route           | The response has HTTP status 404 and displays the custom `noindex` page.                                                             |
 | Privacy route           | `/privacy.html` redirects to `/privacy`; the final page declares the extensionless canonical and `noindex, follow`.                  |
 | Crawler resources       | `robots.txt` and `sitemap.xml` return HTTP 200.                                                                                      |

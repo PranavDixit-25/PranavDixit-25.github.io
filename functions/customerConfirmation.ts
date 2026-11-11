@@ -1,5 +1,5 @@
 export const customerConfirmationPreview = {
-    name: 'Kamil Nowak',
+    name: 'Pranav Dixit',
     message: 'Have a project, opportunity, or idea in mind? Let’s talk.',
 } as const;
 

@@ -1,4 +1,4 @@
-name: Deploy GitHub Pages Redirect
+name: Deploy GitHub Pages
 
 on:
     push:
@@ -8,19 +8,16 @@ on:
 
 permissions:
     contents: read
+    pages: write
+    id-token: write
 
 concurrency:
     group: pages
     cancel-in-progress: true
 
 jobs:
-    deploy:
+    build-and-deploy:
         runs-on: ubuntu-latest
-        permissions:
-            contents: read
-            pages: write
-            id-token: write
-
         environment:
             name: github-pages
             url: ${{ steps.deployment.outputs.page_url }}
@@ -31,13 +28,30 @@ jobs:
               with:
                   persist-credentials: false
 
+            - name: Setup Node.js
+              uses: actions/setup-node@v6
+              with:
+                  node-version: 22
+                  cache: npm
+
+            - name: Install dependencies
+              run: npm ci
+
+            - name: Run lint and automated tests
+              run: |
+                npm run lint
+                npm test
+
+            - name: Build site
+              run: npm run build
+
             - name: Configure GitHub Pages
               uses: actions/configure-pages@v6
 
-            - name: Upload redirect site
+            - name: Upload site artifact
               uses: actions/upload-pages-artifact@v5
               with:
-                  path: .github/pages-redirect
+                  path: dist
 
             - name: Deploy to GitHub Pages
               id: deployment

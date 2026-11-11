@@ -1,6 +1,7 @@
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
+import { initPortfolioUi } from './app/portfolioUi';
 import { completeLoadingScreen } from './app/completeLoadingScreen';
 import { createScrollCue } from './app/createScrollCue';
 import { initNavigation } from './app/initNavigation';
@@ -53,6 +54,7 @@ const slowConnectionTimeout = window.setTimeout(() => {
 }, 12_000);
 
 await waitForInitialLoaderPaint();
+initPortfolioUi();
 
 if (smoothWrapper && contactTabs) {
     smoothWrapper.after(contactTabs);

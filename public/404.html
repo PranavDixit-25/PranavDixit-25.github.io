@@ -4,13 +4,14 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="robots" content="noindex, follow" />
-        <meta name="theme-color" content="#03070d" />
-        <title>Page not found | Kamil Nowak</title>
+        <meta name="theme-color" content="#00040e" />
+        <title>Page not found | Pranav Dixit — Code &amp; Cognition</title>
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <style>
             :root {
                 color-scheme: dark;
-                font-family: system-ui, sans-serif;
-                background: #03070d;
+                font-family: system-ui, -apple-system, sans-serif;
+                background: #00040e;
                 color: #edf8ff;
             }
 
@@ -19,32 +20,41 @@
                 margin: 0;
                 display: grid;
                 place-items: center;
-                background: radial-gradient(circle at 50% 0%, #123247, transparent 38rem), #03070d;
+                background:
+                    radial-gradient(circle at 50% 20%, rgba(59, 130, 246, 0.15), transparent 38rem),
+                    radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.12), transparent 32rem),
+                    #00040e;
             }
 
             main {
-                width: min(38rem, calc(100% - 2rem));
+                width: min(38rem, calc(100% - 2.5rem));
+                text-align: center;
+                padding: 2rem;
             }
 
-            p:first-child {
-                color: #9eefff;
-                font-size: 0.75rem;
+            .eyebrow {
+                color: #06b6d4;
+                font-size: 0.82rem;
                 font-weight: 700;
-                letter-spacing: 0.14em;
+                letter-spacing: 0.18em;
                 text-transform: uppercase;
+                margin-bottom: 0.5rem;
             }
 
             h1 {
-                margin: 0.75rem 0 1rem;
-                font-size: clamp(3rem, 10vw, 6rem);
-                letter-spacing: -0.06em;
-                line-height: 0.95;
+                margin: 0.5rem 0 1rem;
+                font-size: clamp(2.4rem, 8vw, 4.2rem);
+                letter-spacing: -0.04em;
+                line-height: 1.1;
+                font-weight: 300;
             }
 
             p {
-                color: #afc0cb;
+                color: #94a3b8;
                 font-size: 1.1rem;
                 line-height: 1.65;
+                margin: 0 auto 2rem;
+                max-width: 28rem;
             }
 
             nav {
@@ -53,28 +63,35 @@
 
             a {
                 display: inline-block;
-                padding: 0.7rem 1rem;
-                border: 1px solid rgb(158 239 255 / 28%);
+                padding: 0.8rem 1.8rem;
+                border: 1px solid rgba(59, 130, 246, 0.4);
                 border-radius: 999px;
                 color: #edf8ff;
                 text-decoration: none;
+                font-weight: 500;
+                font-size: 0.95rem;
+                background: rgba(59, 130, 246, 0.08);
+                transition: all 0.2s ease;
             }
 
             a:hover,
             a:focus-visible {
-                border-color: #9eefff;
-                color: #9eefff;
+                border-color: #3b82f6;
+                color: #fff;
+                background: rgba(59, 130, 246, 0.2);
+                box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+                outline: none;
             }
         </style>
     </head>
     <body>
         <main>
-            <p>Error 404</p>
-            <h1>This page drifted out of orbit.</h1>
-            <p>The address does not match a published page.</p>
+            <p class="eyebrow">404 — Cosmic Void</p>
+            <h1>Coordinates Drifted Out of Range</h1>
+            <p>The stellar address you requested does not match an active route on this site.</p>
 
             <nav aria-label="Recovery">
-                <a href="/">Main page</a>
+                <a href="/">Return to Orbit (Homepage)</a>
             </nav>
         </main>
     </body>

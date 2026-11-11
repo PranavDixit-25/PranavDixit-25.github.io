@@ -59,510 +59,179 @@ export const preloadAdjacentProjectDetails = async (project: PortfolioProject): 
     );
 };
 
-const frontEndProjects: PortfolioProject[] = [
+const aiAndDataProjects: PortfolioProject[] = [
     {
-        id: 'interactive-3d-portfolio',
-        title: 'Interactive 3D Developer Portfolio',
-        label: '3D Portfolio',
-
+        id: 'supplychain-ai',
+        title: 'SupplyChain AI — Analytics & Operations Assistant',
+        label: 'SupplyChain AI',
         description:
-            'An interactive portfolio that combines real-time 3D visuals with scroll-driven storytelling. A custom Three.js architecture powers the constellation-based project navigation, GLSL shader effects, responsive rendering, and fluid GSAP transitions.',
-
-        period: 'May 2026 – August 2026',
-
-        role: 'Independent Creative Developer',
-
+            'A full-stack operational analytics platform engineered to turn raw supply chain data into high-value decision support across inventory health, procurement, stockout risks, suppliers, and shipments. Features ETL pipelines, normalized PostgreSQL, FastAPI services, a 7-module Streamlit dashboard, and a deterministic conversational assistant with BM25 / SQLite FTS5 document retrieval.',
+        period: '2026',
+        role: 'Analytics Platform',
         skills: [
-            'front-end',
-            'typescript',
-            'vite',
-            'three-js',
-            'webgl',
-            'glsl',
-            'gsap',
-            'scroll-trigger',
-            'scroll-smoother',
-            'split-text',
-            'html',
-            'scss',
-            'responsive-design',
-            'shader-development',
-            '3d-interaction',
-            'motion-design',
-            'performance-optimization',
-            'entity-component-system',
+            'python',
+            'postgresql',
+            'fastapi',
+            'sqlalchemy',
+            'pandas',
+            'streamlit',
+            'plotly',
+            'sqlite-fts5',
+            'etl',
         ],
-
-        domain: 'Creative Web Development / Interactive 3D',
-
-        owner: 'Independent Personal Project',
+        domain: 'AI/ML & Enterprise Analytics',
+        owner: 'Featured Core Project',
         constellation: {
             id: 'front-end',
-            position: [-1.02, 0.82, -0.18],
-            links: ['taia-accelerator'],
+            position: [-1.15, 0.75, -0.15],
+            links: ['legal-lens', 'resqconnect-ai'],
         },
     },
     {
-        id: 'it-services',
-
-        title: 'IT Services Platform',
-        label: 'IT Services',
-
+        id: 'legal-lens',
+        title: 'Legal Lens — Legal Metrology AI Compliance Platform',
+        label: 'Legal Lens',
         description:
-            'A responsive customer-facing portal for presenting IT services and handling client enquiries. The project focused on clear information architecture, accessible navigation, and a consistent experience across screen sizes.',
-
-        period: 'April 2019 – June 2019',
-        role: 'Developer',
-
+            'AI-assisted consumer compliance inspection platform built for Smart India Hackathon (SIH26034) under the Legal Metrology (Packaged Commodities) Rules, 2011. Extracts mandatory packaged product declarations, runs a deterministic compliance rule engine, and generates downloadable audit reports.',
+        period: 'SIH 2026',
+        role: 'Team Lead (Backend, AI/RAG & Architecture)',
         skills: [
-            'front-end',
-            'html',
-            'css',
-            'javascript',
-            'barbajs',
-            'gsap',
-            'responsive-design',
-            'github-pages',
+            'python',
+            'fastapi',
+            'sqlalchemy',
+            'postgresql',
+            'opencv',
+            'tesseract-ocr',
+            'docker',
         ],
-
-        domain: 'IT Services / Web Portals',
-        owner: 'Cracow University of Technology',
-
+        domain: 'Regulatory Compliance & AI Inspection',
+        owner: 'Smart India Hackathon Team Project',
         constellation: {
             id: 'front-end',
-            position: [-1.38, -0.81, 0.12],
-            links: ['intouch'],
+            position: [-1.45, -0.4, 0.12],
+            links: ['supplychain-ai'],
         },
     },
     {
-        id: 'intouch',
-        title: 'InTouch',
-        label: 'InTouch',
-
+        id: 'resqconnect-ai',
+        title: 'ResQConnect AI — Emergency Response Network',
+        label: 'ResQConnect AI',
         description:
-            'An investor-relations platform that helps public companies manage shareholder data and analyze investor behavior. Delivered high-fidelity React interfaces, established maintainable front-end patterns, and integrated the application with RESTful services.',
-
-        period: 'June 2023 – May 2024',
-        role: 'Senior Full-Stack Developer',
-
-        skills: [
-            'front-end',
-            'react',
-            'material-ui',
-            'restful-api',
-            'eq-design-system',
-            'typescript',
-        ],
-
-        domain: 'Investor Relations Consultancy / Shareholder Analytics',
-        owner: 'Endava (Client: EQ RD:IR)',
-
+            'Conceptual emergency response network architecture connecting patients, ambulance operators, and hospitals. Features voice-assisted SOS, Gemini-assisted severity triage, scoring-based ambulance allocation, and live transit alert workflows.',
+        period: '2026',
+        role: 'Lead Developer',
+        skills: ['javascript', 'gemini-api', 'rest-api'],
+        domain: 'Emergency Medical Coordination & AI Triage',
+        owner: 'Concept Prototype',
         constellation: {
             id: 'front-end',
-            position: [-0.42, -0.16, 0.02],
-            links: ['equiniti-design-system', 'interactive-3d-portfolio'],
-        },
-    },
-    {
-        id: 'equiniti-design-system',
-
-        title: 'Equiniti Design System',
-        label: 'Design System',
-
-        description:
-            'Contributed reusable components to the EQ Design System and integrated them across products in the Equiniti ecosystem. Shared Material UI patterns improved visual consistency, accessibility, and reuse while reducing duplicated interface code.',
-
-        period: 'June 2023 – May 2024',
-        role: 'Senior Full-Stack Developer',
-
-        skills: [
-            'front-end',
-            'react',
-            'typescript',
-            'material-ui',
-            'design-system',
-            'component-library',
-            'responsive-design',
-            'accessibility',
-            'ui-architecture',
-        ],
-
-        domain: 'Design Systems / Financial Services',
-        owner: 'Endava (Client: Equiniti)',
-
-        constellation: {
-            id: 'front-end',
-            position: [0.52, 0.45, -0.1],
-            links: ['taia-accelerator'],
-        },
-    },
-    {
-        id: 'power-analyser',
-        title: 'Three-Phase Electric Power Analyser',
-        label: 'Power Analyser',
-
-        description:
-            'A hardware-software IoT solution for capturing and analyzing data from three-phase electrical systems. Interactive graphs expose interference patterns in real time, helping users tune compensation settings and assess system performance.',
-
-        period: 'October 2017 – February 2018',
-        role: 'Developer',
-
-        skills: ['front-end', 'iot', 'data-visualization', 'graphs', 'real-time-monitoring'],
-
-        domain: 'Internet of Things / Power Electronics',
-        owner: 'Cracow University of Technology',
-
-        constellation: {
-            id: 'front-end',
-            position: [0.74, 2.1, -0.38],
-            links: [],
-        },
-    },
-    {
-        id: 'taia-accelerator',
-        title: 'Test AI Accelerator (TAIA)',
-        label: 'TAIA',
-        description:
-            'An AI-assisted platform that accelerates acceptance test-driven development by turning project context into user stories, test cases, and automated test code. It maintains traceability from requirements to Allure results, reducing manual coordination across the delivery lifecycle.',
-        period: 'August 2025 – March 2026',
-        role: 'Senior Full-Stack Developer',
-        skills: [
-            'front-end',
-            'typescript',
-            'ai-integration',
-            'llm',
-            'atdd',
-            'test-automation',
-            'allure-reports',
-            'jira-integration',
-            'traceability-analysis',
-        ],
-        domain: 'Software Engineering / AI & Test Automation',
-        owner: 'Endava',
-        constellation: {
-            id: 'front-end',
-            position: [-0.08, 1.5, -0.28],
-            links: ['power-analyser'],
+            position: [-0.85, -0.85, -0.22],
+            links: ['supplychain-ai'],
         },
     },
 ];
 
 const fullStackProjects: PortfolioProject[] = [
     {
-        id: 'masters-thesis',
-        title: 'Master’s Thesis: Real-time Groupware Synchronization Application (Collab)',
-        label: 'Collab Sync',
-
+        id: 'unismart-lms',
+        title: 'UniSmart LMS — Intelligent Academic Portal',
+        label: 'UniSmart LMS',
         description:
-            'A research-driven groupware application exploring real-time synchronization across distributed clients. The project focused on conflict handling, data consistency, and the architectural trade-offs required for reliable collaborative editing.',
-
-        period: 'March 2021 – July 2021',
-        role: 'Master of Engineering Student',
-
+            'An academic management platform prototype featuring decoupled Administrator and Faculty portals, role-based access control, OTP/JWT authentication, automated class scheduling, Excel data import/export, and generative AI attendance analytics.',
+        period: '2026',
+        role: 'Full-Stack Developer',
         skills: [
-            'full-stack',
             'react',
-            'yjs',
-            'scss',
-            'csharp',
-            'aspnet-core',
-            'entity-framework-core',
-            'sql-server',
-            'computer-science-research',
-            'synchronization-logic',
-            'groupware',
-            'distributed-systems',
-            'complex-technical-communication',
+            'vite',
+            'tailwind',
+            'nodejs',
+            'mongodb',
+            'jwt',
+            'gemini-api',
         ],
-
-        domain: 'Computer Science / Distributed Systems',
-        owner: 'AGH University of Krakow',
-
+        domain: 'Educational Technology & Enterprise Portals',
+        owner: 'Academic Project Prototype',
         constellation: {
             id: 'full-stack',
-            position: [0.95, 1.4, -0.06],
-            links: [],
+            position: [0.15, 0.95, -0.25],
+            links: ['lost-and-found'],
         },
     },
     {
-        id: 'bachelors-thesis',
-        title: 'Bachelor’s Thesis: A web-based groupware application that provides a knowledge management solution (Collab)',
-        label: 'Collab Knowledge',
-
+        id: 'lost-and-found',
+        title: 'Campus Lost & Found Management System',
+        label: 'Lost & Found',
         description:
-            'A web-based knowledge-management platform designed to help project teams organize and share information. Led a student development team while shaping the architecture, data model, and full-stack implementation.',
-
-        period: 'October 2019 – January 2020',
-        role: 'BE Student / .NET Students Scientific Association Leader',
-
-        skills: [
-            'full-stack',
-            'knowledge-management',
-            'web-architecture',
-            'react',
-            'scss',
-            'csharp',
-            'aspnet-core',
-            'entity-framework-core',
-            'sql-server',
-            'technical-leadership',
-        ],
-
-        domain: 'Computer Science / Knowledge Management',
-        owner: 'Cracow University of Technology',
-
+            'A desktop management application for university campuses to streamline lost property reporting, verification, and claim processing. Built with layered OOP architecture (GUI, Manager, Model, Interface, Utility) and persistent JSON storage.',
+        period: '2025',
+        role: 'Independent Developer',
+        skills: ['java', 'swing', 'system-design', 'dsa'],
+        domain: 'Campus Administration & Desktop Applications',
+        owner: 'Standalone Desktop Application',
         constellation: {
             id: 'full-stack',
-            position: [0.485, 0.95, 0.14],
-            links: ['masters-thesis'],
-        },
-    },
-    {
-        id: 'shareowner-online',
-        title: 'ShareOwner Online',
-        label: 'ShareOwner',
-
-        description:
-            'A fintech platform for managing shareholder accounts, transactions, and dividend reinvestment workflows. Delivered business-critical features and strengthened maintainability through component testing, production monitoring, and developer documentation.',
-
-        period: 'June 2024 – September 2025',
-        role: 'Senior Full-Stack Developer',
-
-        skills: [
-            'full-stack',
-            'csharp',
-            'aspnet-mvc',
-            'react',
-            'material-ui',
-            'cypress',
-            'new-relic',
-            'mkdocs',
-            'typescript',
-            'performance-analysis',
-        ],
-
-        domain: 'Investment Management / Fintech',
-        owner: 'Endava',
-
-        constellation: {
-            id: 'full-stack',
-            position: [-0.773, -0.9, 0],
-            links: ['equiniti-website', 'abb-cynk-portal'],
-            labelOffset: [0, 0.12],
-        },
-    },
-    {
-        id: 'abb-cynk-portal',
-        title: 'CYNK (Group-level Web Portal)',
-        label: 'CYNK',
-
-        description:
-            'An internal communications hub for ABB’s Krakow office, bringing employee initiatives, case studies, news, and corporate resources into one place. Contributed across the Angular interface, ASP.NET Core backend, and supporting data layer.',
-
-        period: 'October 2018 – June 2019',
-        role: 'Junior Full-Stack .NET Developer',
-
-        skills: [
-            'full-stack',
-            'csharp',
-            'aspnet-core',
-            'angular',
-            'sql-server',
-            'entity-framework-core',
-            'html',
-            'scss',
-            'javascript',
-            'enterprise-communications',
-        ],
-
-        domain: 'Corporate Communications / Enterprise Internal Portal',
-        owner: 'ABB',
-
-        constellation: {
-            id: 'full-stack',
-            position: [-1.009, 0.088, 0.1],
-            links: ['help-and-support'],
-        },
-    },
-    {
-        id: 'equiniti-website',
-        title: 'Equiniti.com Website',
-        label: 'Equiniti.com',
-
-        description:
-            'A large corporate website presenting Equiniti’s financial services through an Umbraco-based content platform. Delivered features spanning React components and ASP.NET MVC, connected legacy systems, and supported deployment and observability in Azure.',
-
-        period: 'October 2021 – June 2023',
-        role: 'Senior Full-Stack Developer',
-
-        skills: [
-            'full-stack',
-            'csharp',
-            'csharp-dotnet',
-            'umbraco-cms',
-            'mvc',
-            'azure',
-            'react',
-            'typescript',
-        ],
-
-        domain: 'Corporate Services / Financial Ecosystem',
-        owner: 'Endava (Client: Equiniti)',
-        constellation: {
-            id: 'full-stack',
-            position: [0.38, -0.714, -0.08],
-            links: ['help-and-support'],
-            labelOffset: [0, 0.12],
-        },
-    },
-    {
-        id: 'help-and-support',
-        title: 'Help & Support Center',
-        label: 'Help Center',
-
-        description:
-            'A responsive single-page support application for investment-account and employee-scheme customers. Built React interfaces from detailed designs and integrated them with a .NET API gateway that exposed content from a legacy knowledge system.',
-
-        period: 'October 2021 – June 2023',
-        role: 'Senior Full-Stack Developer',
-
-        skills: [
-            'front-end',
-            'react',
-            'html',
-            'scss',
-            'cypress',
-            'eq-design-system',
-            'typescript',
-            'spa-architecture',
-        ],
-
-        domain: 'Corporate Services / Financial Support',
-        owner: 'Endava (Client: Equiniti)',
-
-        constellation: {
-            id: 'full-stack',
-            position: [0.153, 0.4, 0.12],
-            links: ['bachelors-thesis'],
-            labelOffset: [0, -0.18],
+            position: [-0.18, 0.1, 0.28],
+            links: ['unismart-lms'],
         },
     },
 ];
 
-const backEndProjects: PortfolioProject[] = [
+const visionAndMobileProjects: PortfolioProject[] = [
     {
-        id: 'groupware-knowledge-platform',
-        title: 'Knowledge Management & Collaborative Groupware',
-        label: 'Groupware',
+        id: 'hand-gesture-mouse',
+        title: 'Hand Gesture Virtual Mouse',
+        label: 'Virtual Mouse',
         description:
-            'A collaborative knowledge platform for organizing and exchanging information within project teams. Led the student team and contributed to the React interface, ASP.NET Core services, persistence model, and overall application architecture.',
-        period: 'March 2019 – May 2019',
-        role: 'A leader of .NET students scientific association | Group representative',
-        skills: [
-            'back-end',
-            'csharp',
-            'aspnet-core',
-            'mvc',
-            'react',
-            'sql-server',
-            'entity-framework-core',
-            'technical-leadership',
-        ],
-        domain: 'Computer Science / Knowledge Management / Collaborative Systems',
-        owner: 'Cracow University of Technology',
-
+            'A webcam-driven human-computer interaction system leveraging real-time computer vision and hand tracking to control OS mouse pointer movement, clicks, scrolling, and dragging via pinch gestures.',
+        period: '2025–2026',
+        role: 'Computer Vision Developer',
+        skills: ['python', 'opencv', 'mediapipe', 'pyautogui', 'computer-vision'],
+        domain: 'HCI & Real-Time Computer Vision',
+        owner: 'Independent Open-Source Project',
         constellation: {
             id: 'back-end',
-            position: [0.64, 1.14, -0.3],
-            links: ['kvl-security-device', 'onboarding-solution'],
+            position: [1.12, 0.65, -0.18],
+            links: ['vigilant'],
         },
     },
     {
-        id: 'kvl-security-device',
-        title: 'Security Device (KVL)',
-        label: 'Security Device (KVL)',
-
+        id: 'vigilant',
+        title: 'Vigilant — Vision-Based Access & Safety Monitoring',
+        label: 'Vigilant',
         description:
-            'An Android-based Key Variable Loader for securely managing encryption keys used by communication systems. Contributed to implementation, automated testing, local persistence, and cryptographic workflows in a security-sensitive environment.',
-
-        period: 'July 2018 – September 2018',
-        role: 'Intern C# .NET Software Developer',
-
-        skills: [
-            'back-end',
-            'csharp',
-            'android-platform',
-            'xamarin',
-            'mvvmcross',
-            'jenkins',
-            'cryptography',
-            'security',
-            'sqlite',
-            'api-security',
-        ],
-
-        domain: 'Cybersecurity / Key Management',
-        owner: 'Motorola Solutions',
-
+            'Ongoing computer-vision surveillance project designed to monitor campus vehicle entry/exit points, automate license plate recognition (ANPR), and detect two-wheeler helmet safety violations in real time.',
+        period: '2026 (Active)',
+        role: 'Lead Vision Engineer',
+        skills: ['python', 'opencv', 'computer-vision', 'tesseract-ocr'],
+        domain: 'Surveillance Analytics & Safety Vision',
+        owner: 'In-Progress Development Project',
         constellation: {
             id: 'back-end',
-            position: [-0.48, -0.92, -0.02],
-            labelOffset: [0.28, 0],
-            links: ['onboarding-solution'],
+            position: [1.38, -0.25, 0.15],
+            links: ['hand-gesture-mouse', 'expense-tracker'],
         },
     },
     {
-        id: 'onboarding-solution',
-        title: 'FOREX.COM Onboarding Solution',
-        label: 'Onboarding',
-
+        id: 'expense-tracker',
+        title: 'Expense Tracker Mobile App',
+        label: 'Expense Tracker',
         description:
-            'A regulated fintech platform supporting client acquisition, onboarding, and lifecycle management. Developed RESTful services and business workflows that connected client-facing applications with internal systems and operational processes.',
-
-        period: 'July 2019 – September 2021',
-        role: '.NET Software Engineer',
-
-        skills: [
-            'back-end',
-            'csharp',
-            'aspnet-core',
-            't-sql',
-            'activemq',
-            'specflow',
-            'teamcity',
-            'fluent-assertions',
-            'rest-web-services',
-        ],
-
-        domain: 'Fintech / Client Acquisition',
-        owner: 'StoneX',
-
+            'A cross-platform mobile expense tracking application developed during the COGNITION 4.0 workshop, featuring category-based expense logging, local persistence, and responsive UI state management.',
+        period: '2026',
+        role: 'Mobile Developer',
+        skills: ['react-native', 'javascript', 'tailwind'],
+        domain: 'Personal Finance & Cross-Platform Mobile',
+        owner: 'COGNITION 4.0 Workshop Project',
         constellation: {
             id: 'back-end',
-            position: [-1, 0.66, 0.1],
-            labelOffset: [-0.05, 0.05],
-            links: [],
+            position: [0.88, -0.88, -0.12],
+            links: ['vigilant'],
         },
     },
 ];
 
-const constellationScrollOrder = {
-    'front-end': 0,
-    'full-stack': 1,
-    'back-end': 2,
-} satisfies Record<PortfolioProject['constellation']['id'], number>;
-
-const compareProjectScrollOrder = (a: PortfolioProject, b: PortfolioProject): number =>
-    constellationScrollOrder[a.constellation.id] - constellationScrollOrder[b.constellation.id] ||
-    a.constellation.position[0] - b.constellation.position[0] ||
-    b.constellation.position[1] - a.constellation.position[1];
-
-const portfolioProjectsWithoutScreenshots: PortfolioProject[] = [
-    ...frontEndProjects,
+export const portfolioProjects: PortfolioProject[] = withProjectScreenshots([
+    ...aiAndDataProjects,
     ...fullStackProjects,
-    ...backEndProjects,
-].sort(compareProjectScrollOrder);
-
-export const portfolioProjects: PortfolioProject[] = withProjectScreenshots(
-    portfolioProjectsWithoutScreenshots,
-);
+    ...visionAndMobileProjects,
+]);

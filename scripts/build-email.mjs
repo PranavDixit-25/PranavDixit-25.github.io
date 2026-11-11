@@ -27,11 +27,11 @@ const themedSignatureAssets = [
     { key: 'email', filename: 'email.png' },
     { key: 'globe', filename: 'globe.png' },
     { key: 'linkedIn', filename: 'linkedin.png' },
-    { key: 'monogram', filename: 'kn-monogram.png' },
+    { key: 'monogram', filename: 'pd-monogram.png' },
     { key: 'location', filename: 'location.png' },
 ];
 const staticSignatureAssets = [{ key: 'wave', filename: 'signature-wave.png' }];
-const publicEmailAssetBaseUrl = 'https://nowakkamil.com/email';
+const publicEmailAssetBaseUrl = 'https://pranavdixit-25.github.io/email';
 const assetVersionManifestPath = path.join(projectRoot, 'emails', 'asset-versions.json');
 
 const customerVariant = 'customer-message-dark';
@@ -191,7 +191,7 @@ async function buildSignaturePreview(assetUrls) {
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Kamil Nowak — Email signature preview</title>
+        <title>Pranav Dixit — Email signature preview</title>
     </head>
     <body style="margin: 0; padding: 16px; background-color: #010611">
 ${indentedSignature}

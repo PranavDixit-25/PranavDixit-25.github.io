@@ -1,6 +1,6 @@
 <mjml lang="en" dir="ltr">
     <mj-head>
-        <mj-title>New inquiry — nowakkamil.com</mj-title>
+        <mj-title>New inquiry — Code & Cognition Portfolio</mj-title>
         <mj-preview>New portfolio inquiry from {{ customerName }}</mj-preview>
         <mj-attributes>
             <mj-all
@@ -166,7 +166,7 @@
                                 text-transform: uppercase;
                             "
                         >
-                            nowakkamil.com
+                            Code &amp; Cognition Portfolio
                         </td>
                     </tr>
                     <tr>
