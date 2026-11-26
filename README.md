@@ -103,7 +103,7 @@ npm run preview
 ```
 ├── public/                 # Static assets (portrait, icons, robots.txt, sitemap.xml, llms.txt)
 │   └── images/
-│       └── pranav-profile.jpeg  # Verified central portrait
+│       └── pranav-profile.png   # Verified central portrait
 ├── src/
 │   ├── app/                # Application initialization and UI logic
 │   │   └── portfolioUi.ts  # Modals, mobile drawer, contact form, smooth scrolling
